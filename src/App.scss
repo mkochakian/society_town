@@ -1,0 +1,72 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  height: 600px;
+  width: 600px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.pixel {
+  position: absolute;
+  // background-color: blue;
+  height: 10px;
+  width: 10px;
+}
+.panel {
+  height: 600px;
+  width: 360px;
+  border: 1px solid rgba(255,255,255,.1);
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 48px;
+    width: 100%;
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      border-radius: 5px;
+      position: absolute;
+
+      color: white;
+      height: 48px;
+      width: 48px;
+      background-color: rgba(255, 255, 255,.3);
+      box-shadow: 0 4px 0 rgba(255, 255, 255, .15);
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        top: 2px;
+        bottom: -2px;
+        box-shadow: 0 0px 0px rgba(255, 255, 255, .15);
+      }
+
+      &#left-button {
+        left: 90px;
+      }
+
+      &#right-button {
+        right: 90px;
+      }
+    }
+  }
+}
